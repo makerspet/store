@@ -1,0 +1,72 @@
+#
+# Board-specific assignments
+#
+board:
+  manufacturer: makerspet.com
+  model: BDC-38C4
+  version: v1.2.0
+lidar:
+  gpio:
+    tx: 35
+    rx: 27
+    pwm: 13
+    en: 32
+led:
+  system:
+    driver:
+      type: direct
+      gpio: 2
+      invert: false
+button:
+  boot:
+    gpio: 0
+    invert: true
+monitor:
+  gpio:
+    tx: 1
+motor:
+  driver:
+    type: IN1_IN2
+  encoder:
+    type: AB_QUAD
+  left:
+    encoder:
+      gpio:
+        a: 39
+        b: 36
+    driver:
+      gpio:
+        in1: 26
+        in2: 25
+  right:
+    encoder:
+      gpio:
+        a: 17
+        b: 16
+    driver:
+      gpio:
+        in1: 23
+        in2: 22
+adc:
+  battery:
+    attenuation: 7.0
+    gpio: 33
+    voltage:
+# 12V motors, 6x AA/D/C (1.2-1.6V) batteries
+      full: 9.9
+      empty: 7.2
+# 12V motors, 2S (2x 3.0-4.2V) cells
+#     full: 8.4
+#     empty: 6.0
+# 24V motors, 12x AA/D/C (1.2-1.6V) batteries
+#     full: 19.2
+#     empty: 14.4
+# 24V motors, 8x AA/D/C (1.2-1.6V) batteries
+#     full: 12.8
+#     empty: 9.6
+# 24V motors, 5S (2x 3.0-4.2V) cells
+#     full: 21.0
+#     empty: 15.0
+# 24V motors, 4S (2x 3.0-4.2V) cells
+#     full: 16.8
+#     empty: 12.0
